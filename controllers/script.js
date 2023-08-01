@@ -60,7 +60,9 @@ function copiar() {
     mensaje.select();
     document.execCommand("copy");
     mensaje.value = "";
-    mensaje.style.height = "auto"
+    if (window.innerWidth < 1024) {
+        mensaje.style.height = "auto";
+    }
     alert("Texto copiado con éxito");
 }
 
